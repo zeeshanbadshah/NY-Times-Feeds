@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Created by https://www.gitignore.io/api/xcode,swift,objective-c
 # Edit at https://www.gitignore.io/?templates=xcode,swift,objective-c
 
 ### Objective-C ###
+=======
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 =======
 >>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 # Xcode
@@ -36,6 +39,7 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # CocoaPods
 # We recommend against adding the Pods directory to your .gitignore. However
@@ -80,12 +84,18 @@ iOSInjectionProject/
 
 =======
 >>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
+=======
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
 
 # Swift Package Manager
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+#
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 =======
 #
 >>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
@@ -96,6 +106,7 @@ playground.xcworkspace
 .build/
 
 # CocoaPods
+<<<<<<< HEAD
 <<<<<<< HEAD
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
@@ -111,6 +122,8 @@ playground.xcworkspace
 
 # fastlane
 =======
+=======
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 #
 # We recommend against adding the Pods directory to your .gitignore. However
 # you should judge for yourself, the pros and cons are mentioned at:
@@ -127,12 +140,16 @@ Carthage/Build
 
 # fastlane
 #
+<<<<<<< HEAD
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
+=======
 >>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 # Code Injection
@@ -160,8 +177,13 @@ Carthage/Build
 
 # End of https://www.gitignore.io/api/xcode,swift,objective-c
 =======
+=======
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+<<<<<<< HEAD
+>>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
+=======
 >>>>>>> d0472c1cd0c61fd7b4af4abd7839f02bec58d751
