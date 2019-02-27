@@ -11,24 +11,74 @@ import XCTest
 
 class NewYorkTimesTests: XCTestCase {
 
+    var mainVC = MainVC()
+    var detailVC = DetailVC()
+    var storyBaord = UIStoryboard()
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        storyBaord = UIStoryboard(name: "Main", bundle: nil)
+        mainVC = storyBaord.instantiateViewController(withIdentifier: "mainVC") as! MainVC
+        detailVC = storyBaord.instantiateViewController(withIdentifier: "detailVC") as! DetailVC
+        _ = mainVC.view
+        _ = detailVC.view
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testHasMainVC() {
+        
+        XCTAssertNotNil(mainVC,"No mainVC identifier found")
+       
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testInitTableView()  {
+        
+        XCTAssertNotNil(mainVC.tblView)
     }
+    
+    func testHasTableViewDataSource()  {
+        
+        XCTAssertTrue(mainVC.tblView.dataSource is MainVC)
+    }
+    
+    func testHasTableViewDelegate()  {
+        
+        XCTAssertTrue(mainVC.tblView.delegate is MainVC)
+    }
+    
+    func testFeedsJsonParse()  {
+        
+        let filterMostViewed = "mostpopular/v2/mostviewed/all-sections/7.json?api-key="
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        WebApiMock().getFeeds(filter: filterMostViewed) { (feeds) in
+            
+            XCTAssertTrue(feeds.results.count > 0)
+            
+            if(feeds.results.count > 0){
+                
+                self.mainVC.feeds = feeds.results
+                self.mainVC.tblView.reloadData()
+            }
         }
     }
+    
+    func testTableViewHasCells()  {
+
+        testFeedsJsonParse()
+        XCTAssertEqual(mainVC.tblView.numberOfRows(inSection: 0), 1)
+        XCTAssertGreaterThan(mainVC.tblView.numberOfRows(inSection: 0), 0)
+    }
+    
+    
+    func testHasDetailVC() {
+        
+            XCTAssertNotNil(detailVC,"No detailVC identifier found")
+    }
+    
+    func testHasDetailVCWebView() {
+        
+        testHasDetailVC()
+        XCTAssertNotNil(detailVC.webview, "No Webview found")
+    }
+    
+    
 
 }
