@@ -59,7 +59,3 @@ Test JSON pareser works fine. Mocked Networking has been used to test JSON parsi
 
 Need Simulator or Device to deploy.
 
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
